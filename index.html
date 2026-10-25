@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daily Quotes</title>
+  <script>
+    (function () {
+      var t = 'auto';
+      try { t = localStorage.getItem('quotes.theme') || 'auto'; } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = 'auto';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="theme-color" content="#F3F1EC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131517" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Quotes">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <p class="date" id="date"></p>
+      <div class="actions">
+        <span class="theme-label" id="themeLabel" aria-hidden="true"></span>
+        <button class="icon-btn" id="addBtn" type="button" aria-label="Add a quote">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <button class="icon-btn" id="shareBtn" type="button" aria-label="Share this quote as an image">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8"/></svg>
+        </button>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Appearance: Auto. Tap to change.">
+          <svg viewBox="0 0 24 24" aria-hidden="true" id="themeIcon"></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="stage" id="stage">
+      <figure class="quote" id="quote" aria-live="polite" aria-atomic="true">
+        <span class="mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="quote-text" id="quoteText"></blockquote>
+        <figcaption class="attribution">
+          <span class="author" id="quoteAuthor"></span>
+          <cite class="source" id="quoteSource"></cite>
+        </figcaption>
+      </figure>
+    </main>
+
+    <div class="sr-only" role="group" aria-label="Quote actions">
+      <button type="button" data-act="next">Next quote</button>
+      <button type="button" data-act="prev">Previous quote</button>
+      <button type="button" data-act="up">Resonates</button>
+      <button type="button" data-act="down">Not today</button>
+    </div>
+
+    <p class="toast" id="toast" aria-live="polite"></p>
+  </div>
+
+  <!-- Add a quote -->
+  <div class="backdrop" id="addBackdrop" hidden></div>
+  <section class="sheet" id="addSheet" role="dialog" aria-modal="true" aria-label="Add a quote" hidden>
+    <div class="sheet-grip" data-grip><span class="grabber"></span></div>
+    <div class="sheet-head" data-grip>
+      <button type="button" class="text-btn" id="addCancel">Cancel</button>
+      <button type="button" class="pill" id="addSave" disabled>Save</button>
+    </div>
+    <form class="sheet-body" id="addForm" autocomplete="off">
+      <span class="mark" aria-hidden="true">&ldquo;</span>
+      <label class="sr-only" for="fText">Quote</label>
+      <textarea id="fText" rows="2" placeholder="Words worth returning to…"></textarea>
+      <div class="field">
+        <label for="fAuthor">Author</label>
+        <input id="fAuthor" type="text" placeholder="Who said it" autocapitalize="words">
+      </div>
+      <div class="field">
+        <label for="fSource">Source · optional</label>
+        <input id="fSource" type="text" class="italic" placeholder="Book, poem, letter, conversation…">
+      </div>
+    </form>
+  </section>
+
+  <!-- Share as image -->
+  <div class="backdrop" id="shareBackdrop" hidden>
+    <div class="preview-wrap"><img class="preview" id="sharePreview" alt=""></div>
+  </div>
+  <section class="sheet share-sheet" id="shareSheet" role="dialog" aria-modal="true" aria-label="Share this quote" hidden>
+    <div class="sheet-grip" data-grip><span class="grabber"></span></div>
+    <p class="caption">Share this quote as an image</p>
+    <div class="share-row">
+      <button type="button" class="btn-outline" id="saveImage">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+        Save image
+      </button>
+      <button type="button" class="btn-ink" id="shareImage">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8"/></svg>
+        Share…
+      </button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

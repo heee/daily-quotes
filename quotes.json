@@ -1,0 +1,9 @@
+[
+  { "id": "thoreau-walden-1", "text": "Go confidently in the direction of your dreams. Live the life you have imagined.", "author": "Henry David Thoreau", "source": "Walden", "lang": "en" },
+  { "id": "rilke-briefe-1", "text": "Sei geduldig gegen alles Ungelöste in deinem Herzen und versuche, die Fragen selbst liebzuhaben.", "author": "Rainer Maria Rilke", "source": "Briefe an einen jungen Dichter", "lang": "de" },
+  { "id": "aurelius-meditations-5-20", "text": "The impediment to action advances action. What stands in the way becomes the way.", "author": "Marcus Aurelius", "source": "Meditations, V.20", "lang": "en" },
+  { "id": "nietzsche-goetzen-1", "text": "Wer ein Warum zum Leben hat, erträgt fast jedes Wie.", "author": "Friedrich Nietzsche", "source": "Götzen-Dämmerung", "lang": "de" },
+  { "id": "hoelderlin-patmos-1", "text": "Wo aber Gefahr ist, wächst das Rettende auch.", "author": "Friedrich Hölderlin", "source": "Patmos", "lang": "de" },
+  { "id": "seneca-lucilius-1", "text": "While we are postponing, life speeds by.", "author": "Seneca", "source": "Letters to Lucilius, I", "lang": "en" },
+  { "id": "goethe-wanderjahre-1", "text": "Es ist nicht genug, zu wissen, man muß auch anwenden; es ist nicht genug, zu wollen, man muß auch tun.", "author": "Johann Wolfgang von Goethe", "source": "Wilhelm Meisters Wanderjahre", "lang": "de" }
+]
