@@ -18,5 +18,8 @@
   {"id": "epictetus-enchiridion-5", "text": "Men are disturbed not by the things which happen, but by the opinions about the things.", "author": "Epictetus", "source": "Enchiridion, 5", "lang": "en"},
   {"id": "aurelius-meditations-5-16", "text": "Such as are thy habitual thoughts, such also will be the character of thy mind; for the soul is dyed by the thoughts.", "author": "Marcus Aurelius", "source": "Meditations, V.16", "lang": "en"},
   {"id": "gibran-prophet-marriage-1", "text": "Let there be spaces in your togetherness, and let the winds of the heavens dance between you.", "author": "Kahlil Gibran", "source": "The Prophet, “On Marriage”", "lang": "en"},
-  {"id": "nin-diary-3-courage", "text": "Life shrinks or expands in proportion to one’s courage.", "author": "Anaïs Nin", "source": "The Diary of Anaïs Nin, Vol. 3", "lang": "en"}
+  {"id": "nin-diary-3-courage", "text": "Life shrinks or expands in proportion to one’s courage.", "author": "Anaïs Nin", "source": "The Diary of Anaïs Nin, Vol. 3", "lang": "en"},
+  {"id": "seneca-lucilius-71-port", "text": "If one does not know to which port one is sailing, no wind is favorable.", "author": "Seneca", "source": "Letters to Lucilius, LXXI", "lang": "en"},
+  {"id": "emerson-self-reliance-peace", "text": "Nothing can bring you peace but yourself.", "author": "Ralph Waldo Emerson", "source": "Self-Reliance", "lang": "en"},
+  {"id": "miller-big-sur-seeing", "text": "One’s destination is never a place, but a new way of seeing things.", "author": "Henry Miller", "source": "Big Sur and the Oranges of Hieronymus Bosch", "lang": "en"}
 ]
