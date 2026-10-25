@@ -13,12 +13,12 @@ Static PWA (HTML + CSS + vanilla JS), no backend, works offline. All your data s
 
 | Gesture | Meaning |
 |---|---|
-| Swipe left | Next quote |
-| Swipe right | Previous quote (this session) |
+| Swipe right | A new random quote |
+| Swipe left | Back through the quotes you've seen this session |
 | Swipe up | "Stays with me" — shown more often |
 | Swipe down | "Resting for now" — shown rarely for 3 days |
 
-On a desktop browser the arrow keys do the same (← next, → previous, ↑ resonates, ↓ not today).
+On a desktop browser the arrow keys do the same (→ new quote, ← back, ↑ resonates, ↓ not today).
 
 - **+** adds your own quote (saved on this device only).
 - **Share** renders a 1080×1350 image and opens the share sheet (choose *Save Image* there to keep it in Photos).

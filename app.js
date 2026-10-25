@@ -120,9 +120,9 @@
     }
   }
 
+  // New quotes always go to the end of history so going back retraces everything seen.
   function showNew(q) {
     if (!q) return;
-    history = history.slice(0, cursor + 1);
     history.push(q.id);
     cursor = history.length - 1;
     remember(q.id);
@@ -175,23 +175,20 @@
 
   // ---------- Actions ----------
   function advance() {
-    if (cursor < history.length - 1) {
-      cursor++;
-      render(findQuote(history[cursor]));
-    } else {
-      showNew(pickNext());
-    }
+    showNew(pickNext());
   }
 
+  // Swipe right / →: a fresh weighted-random quote.
   function goNext() {
     if (animating) return;
-    transition([-420, 0], [90, 0], advance);
+    transition([420, 0], [-90, 0], advance);
   }
 
+  // Swipe left / ←: step back through the quotes seen this session.
   function goPrev() {
     if (animating) return;
     if (cursor <= 0) { springBack(); return; }
-    transition([420, 0], [-90, 0], () => {
+    transition([-420, 0], [90, 0], () => {
       cursor--;
       render(findQuote(history[cursor]));
     });
@@ -267,7 +264,7 @@
     const raw = d.axis === 'x' ? e.clientX - d.x0 : e.clientY - d.y0;
     const committed = Math.abs(raw) >= 70 || (Math.abs(v) > 0.5 && Math.sign(v) === Math.sign(raw));
     if (!committed || e.type === 'pointercancel') { springBack(); return; }
-    if (d.axis === 'x') raw < 0 ? goNext() : goPrev();
+    if (d.axis === 'x') raw < 0 ? goPrev() : goNext();
     else raw < 0 ? resonate() : notToday();
   }
   stage.addEventListener('pointerup', endDrag);
@@ -276,7 +273,7 @@
 
   document.addEventListener('keydown', (e) => {
     if (sheetOpen || e.metaKey || e.ctrlKey || e.altKey) return;
-    const map = { ArrowLeft: goNext, ArrowRight: goPrev, ArrowUp: resonate, ArrowDown: notToday };
+    const map = { ArrowLeft: goPrev, ArrowRight: goNext, ArrowUp: resonate, ArrowDown: notToday };
     if (map[e.key]) { e.preventDefault(); map[e.key](); }
   });
 
