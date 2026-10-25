@@ -21,5 +21,11 @@
   {"id": "nin-diary-3-courage", "text": "Life shrinks or expands in proportion to one’s courage.", "author": "Anaïs Nin", "source": "The Diary of Anaïs Nin, Vol. 3", "lang": "en"},
   {"id": "seneca-lucilius-71-port", "text": "If one does not know to which port one is sailing, no wind is favorable.", "author": "Seneca", "source": "Letters to Lucilius, LXXI", "lang": "en"},
   {"id": "emerson-self-reliance-peace", "text": "Nothing can bring you peace but yourself.", "author": "Ralph Waldo Emerson", "source": "Self-Reliance", "lang": "en"},
-  {"id": "miller-big-sur-seeing", "text": "One’s destination is never a place, but a new way of seeing things.", "author": "Henry Miller", "source": "Big Sur and the Oranges of Hieronymus Bosch", "lang": "en"}
+  {"id": "miller-big-sur-seeing", "text": "One’s destination is never a place, but a new way of seeing things.", "author": "Henry Miller", "source": "Big Sur and the Oranges of Hieronymus Bosch", "lang": "en"},
+  {"id": "seneca-brevitate-1", "text": "It is not that we have a short space of time, but that we waste much of it.", "author": "Seneca", "source": "On the Shortness of Life", "lang": "en"},
+  {"id": "gibran-prophet-joy-sorrow-1", "text": "The deeper that sorrow carves into your being, the more joy you can contain.", "author": "Kahlil Gibran", "source": "The Prophet, “On Joy and Sorrow”", "lang": "en"},
+  {"id": "rilke-stundenbuch-ringe", "text": "Ich lebe mein Leben in wachsenden Ringen, die sich über die Dinge ziehn.", "author": "Rainer Maria Rilke", "source": "Das Stunden-Buch", "lang": "de"},
+  {"id": "goethe-tasso-1-2", "text": "Es bildet ein Talent sich in der Stille, sich ein Charakter in dem Strom der Welt.", "author": "Johann Wolfgang von Goethe", "source": "Torquato Tasso, I.2", "lang": "de"},
+  {"id": "hesse-stufen-anfang", "text": "Und jedem Anfang wohnt ein Zauber inne, der uns beschützt und der uns hilft, zu leben.", "author": "Hermann Hesse", "source": "Stufen", "lang": "de"},
+  {"id": "nietzsche-fw-270", "text": "Du sollst der werden, der du bist.", "author": "Friedrich Nietzsche", "source": "Die fröhliche Wissenschaft, §270", "lang": "de"}
 ]
