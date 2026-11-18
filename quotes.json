@@ -27,5 +27,6 @@
   {"id": "rilke-stundenbuch-ringe", "text": "Ich lebe mein Leben in wachsenden Ringen, die sich über die Dinge ziehn.", "author": "Rainer Maria Rilke", "source": "Das Stunden-Buch", "lang": "de"},
   {"id": "goethe-tasso-1-2", "text": "Es bildet ein Talent sich in der Stille, sich ein Charakter in dem Strom der Welt.", "author": "Johann Wolfgang von Goethe", "source": "Torquato Tasso, I.2", "lang": "de"},
   {"id": "hesse-stufen-anfang", "text": "Und jedem Anfang wohnt ein Zauber inne, der uns beschützt und der uns hilft, zu leben.", "author": "Hermann Hesse", "source": "Stufen", "lang": "de"},
-  {"id": "nietzsche-fw-270", "text": "Du sollst der werden, der du bist.", "author": "Friedrich Nietzsche", "source": "Die fröhliche Wissenschaft, §270", "lang": "de"}
+  {"id": "nietzsche-fw-270", "text": "Du sollst der werden, der du bist.", "author": "Friedrich Nietzsche", "source": "Die fröhliche Wissenschaft, §270", "lang": "de"},
+  {"id": "aurelius-meditations-6-6", "text": "The best revenge is to not be like your enemy.", "author": "Marcus Aurelius", "source": "Meditations, VI.6", "lang": "en"}
 ]
